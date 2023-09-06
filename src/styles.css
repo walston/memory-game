@@ -1,0 +1,48 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.board {
+  margin: 1em auto;
+  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(5, 75px);
+  grid-template-rows: repeat(5, 75px);
+  gap: 5px;
+  z-index: -1;
+}
+
+.board > div {
+  border-radius: 5px;
+  content: " ";
+}
+
+.card {
+  background-color: blue;
+}
+
+.correct {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
+}
+
+.unclicked {
+  background-color: lightgray;
+}
+
+.cover {
+  --size: calc(75px * 5 + 5px * 6);
+  width: var(--size);
+  height: var(--size);
+  margin: calc(-1 * var(--size) - (5px * 2)) auto;
+  border-radius: 9px;
+  background-color: black;
+  color: white;
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+}
